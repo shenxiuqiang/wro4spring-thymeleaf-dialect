@@ -77,5 +77,5 @@ public class ThymeleafMVCConfiguration extends DefaultThymeleaf4SpringWroDialect
 3. @Import the configuration into your DispatcherServlet application context.
 
 **Note:** DefaultThymeleaf4SpringWroDialectConfiguration is an extension of
-<a href="https://github.com/sevensource/thymeleaf4spring">thymeleaf4spring</>s @Configuration classes. See
-<a href="https://github.com/sevensource/thymeleaf4spring">thymeleaf4spring</> for additional information.
+<a href="https://github.com/sevensource/thymeleaf4spring">thymeleaf4spring</a>s @Configuration classes. See
+<a href="https://github.com/sevensource/thymeleaf4spring">thymeleaf4spring</a> for additional information.
