@@ -63,8 +63,9 @@ wro4spring-thymeleaf-dialect features easy support for Javascript resource loade
 creates a JS array of Javascript resources in the default group.
  
 ## Getting started
-1. configure wro4spring
-2. Create a @Configuration file
+* configure wro4spring
+* Create a @Configuration file
+
 ```java
 @Configuration
 public class ThymeleafMVCConfiguration extends DefaultThymeleaf4SpringWroDialectConfiguration {
@@ -74,7 +75,7 @@ public class ThymeleafMVCConfiguration extends DefaultThymeleaf4SpringWroDialect
 	}
 }
 ```
-3. @Import the configuration into your DispatcherServlet application context.
+* @Import the configuration into your DispatcherServlet application context.
 
 **Note:** DefaultThymeleaf4SpringWroDialectConfiguration is an extension of
 <a href="https://github.com/sevensource/thymeleaf4spring">thymeleaf4spring</a>s @Configuration classes. See
