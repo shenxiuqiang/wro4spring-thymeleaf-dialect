@@ -1,7 +1,7 @@
 package org.sevensource.wro4spring.thymeleaf.dialect.processor;
 
-import org.sevensource.wro4spring.thymeleaf.Wro4jDialectConfiguration;
-import org.sevensource.wro4spring.wro4j.WroContextSupport;
+import org.sevensource.wro4spring.WroContextSupport;
+import org.sevensource.wro4spring.WroDeliveryConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.thymeleaf.processor.AttributeNameProcessorMatcher;
@@ -15,9 +15,10 @@ public class Wro4jStyleAttrProcessor extends AbstractWro4jAttrProcessor {
 
 	public static final String ATTR_NAME = "style";
 	public static final String ELEM_NAME = "link";
+	private final static AttributeNameProcessorMatcher matcher = new AttributeNameProcessorMatcher(ATTR_NAME, ELEM_NAME);
 
-	public Wro4jStyleAttrProcessor(Wro4jDialectConfiguration wro4jDialectConfiguration, WroContextSupport wroContextSupport) {
-		super(wro4jDialectConfiguration, wroContextSupport, new AttributeNameProcessorMatcher(ATTR_NAME, ELEM_NAME));
+	public Wro4jStyleAttrProcessor(WroDeliveryConfiguration wroDeliveryConfiguration, WroContextSupport wroContextSupport) {
+		super(wroDeliveryConfiguration, wroContextSupport, matcher);
 	}
 
 	@Override

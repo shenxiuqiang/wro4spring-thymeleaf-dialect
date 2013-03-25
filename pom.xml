@@ -22,7 +22,7 @@
 			<artifactId>wro4spring</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.sevensource</groupId>
 			<artifactId>thymeleaf4spring</artifactId>
@@ -30,16 +30,6 @@
 			<optional>true</optional>
 		</dependency>
 
-		<dependency>
-			<groupId>org.thymeleaf</groupId>
-			<artifactId>thymeleaf</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.thymeleaf</groupId>
-			<artifactId>thymeleaf-spring3</artifactId>
-		</dependency>
-		
 		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
@@ -54,9 +44,9 @@
 	</developers>
 
 	<scm>
-		<url>http://github.com/sevensource/wro4spring-thymeleaf-support</url>
-		<connection>scm:git:git@github.com:sevensource/wro4spring-thymeleaf-support.git</connection>
-		<developerConnection>scm:git:git@github.com:sevensource/wro4spring-thymeleaf-support.git</developerConnection>
+		<url>http://github.com/sevensource/wro4spring-thymeleaf-dialect</url>
+		<connection>scm:git:git@github.com:sevensource/wro4spring-thymeleaf-dialect.git</connection>
+		<developerConnection>scm:git:git@github.com:sevensource/wro4spring-thymeleaf-dialect.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 

@@ -1,7 +1,7 @@
 package org.sevensource.wro4spring.thymeleaf.dialect.processor;
 
-import org.sevensource.wro4spring.thymeleaf.Wro4jDialectConfiguration;
-import org.sevensource.wro4spring.wro4j.WroContextSupport;
+import org.sevensource.wro4spring.WroContextSupport;
+import org.sevensource.wro4spring.WroDeliveryConfiguration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.thymeleaf.processor.AttributeNameProcessorMatcher;
@@ -14,9 +14,10 @@ public class Wro4jScriptAttrProcessor extends AbstractWro4jAttrProcessor {
 	private final static Logger logger = LoggerFactory.getLogger(Wro4jScriptAttrProcessor.class);
 
 	public static final String ATTR_NAME = "script";
+	private static final AttributeNameProcessorMatcher matcher = new AttributeNameProcessorMatcher(ATTR_NAME, ATTR_NAME);
 
-	public Wro4jScriptAttrProcessor(Wro4jDialectConfiguration wro4jDialectConfiguration, WroContextSupport wroContextSupport) {
-		super(wro4jDialectConfiguration, wroContextSupport, new AttributeNameProcessorMatcher(ATTR_NAME, ATTR_NAME));
+	public Wro4jScriptAttrProcessor(WroDeliveryConfiguration wroDeliveryConfiguration, WroContextSupport wroContextSupport) {
+		super(wroDeliveryConfiguration, wroContextSupport, matcher);
 	}
 
 	@Override

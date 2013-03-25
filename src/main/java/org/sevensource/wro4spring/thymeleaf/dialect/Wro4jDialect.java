@@ -3,11 +3,11 @@ package org.sevensource.wro4spring.thymeleaf.dialect;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.sevensource.wro4spring.thymeleaf.Wro4jDialectConfiguration;
+import org.sevensource.wro4spring.WroContextSupport;
+import org.sevensource.wro4spring.WroDeliveryConfiguration;
 import org.sevensource.wro4spring.thymeleaf.dialect.processor.Wro4jScriptAttrProcessor;
 import org.sevensource.wro4spring.thymeleaf.dialect.processor.Wro4jStyleAttrProcessor;
 import org.sevensource.wro4spring.thymeleaf.dialect.processor.Wro4jTagRemovingAttrProcessor;
-import org.sevensource.wro4spring.wro4j.WroContextSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.thymeleaf.dialect.AbstractXHTMLEnabledDialect;
@@ -24,11 +24,11 @@ public class Wro4jDialect extends AbstractXHTMLEnabledDialect {
 
 	public static final String PREFIX = "wro4j";
 
-	private final Wro4jDialectConfiguration wro4jDialectConfiguration;
+	private final WroDeliveryConfiguration wroDeliveryConfiguration;
 	private final WroContextSupport wroContextSupport;
 	
-	public Wro4jDialect(Wro4jDialectConfiguration wro4jDialectConfiguration, WroContextSupport wroContextSupport) {
-		this.wro4jDialectConfiguration = wro4jDialectConfiguration;
+	public Wro4jDialect(WroDeliveryConfiguration wroDeliveryConfiguration, WroContextSupport wroContextSupport) {
+		this.wroDeliveryConfiguration = wroDeliveryConfiguration;
 		this.wroContextSupport = wroContextSupport;
 	}
 
@@ -52,10 +52,10 @@ public class Wro4jDialect extends AbstractXHTMLEnabledDialect {
 		
 		final Set<IProcessor> processors = new HashSet<IProcessor>();
 		processors.add(new Wro4jTagRemovingAttrProcessor(
-				new Wro4jScriptAttrProcessor(wro4jDialectConfiguration, wroContextSupport)));
+				new Wro4jScriptAttrProcessor(wroDeliveryConfiguration, wroContextSupport)));
 		
 		processors.add(new Wro4jTagRemovingAttrProcessor(
-				new Wro4jStyleAttrProcessor(wro4jDialectConfiguration, wroContextSupport)));
+				new Wro4jStyleAttrProcessor(wroDeliveryConfiguration, wroContextSupport)));
 		
 		return processors;
 	}
