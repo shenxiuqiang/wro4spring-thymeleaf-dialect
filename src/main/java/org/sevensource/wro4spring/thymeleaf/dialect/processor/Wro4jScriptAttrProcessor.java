@@ -22,7 +22,7 @@ public class Wro4jScriptAttrProcessor extends AbstractWro4jAttrProcessor {
 
 	@Override
 	protected String getRenderedAttribute(String uri, boolean isDevelopment) {
-		return "<script src=\"" + uri + "\"></script>";
+		return "<script src=\"" + uri + "\"></script>\n";
 	}
 
 	@Override

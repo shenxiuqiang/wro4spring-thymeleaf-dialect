@@ -4,7 +4,7 @@ import java.util.Set;
 
 import javax.inject.Inject;
 
-import org.sevensource.thymeleaf4spring.DefaultAbstractThymeleafTilesConfiguration;
+import org.sevensource.thymeleaf4spring.DefaultAbstractThymeleafConfiguration;
 import org.sevensource.wro4spring.IWroModelAccessor;
 import org.sevensource.wro4spring.WroContextSupport;
 import org.sevensource.wro4spring.WroDeliveryConfiguration;
@@ -22,7 +22,7 @@ import org.thymeleaf.spring3.view.ThymeleafViewResolver;
  * 
  */
 public abstract class DefaultThymeleaf4SpringWroDialectConfiguration extends
-		DefaultAbstractThymeleafTilesConfiguration {
+		DefaultAbstractThymeleafConfiguration {
 
 	@Inject
 	private WroDeliveryConfiguration wro4jDialectConfiguration;
