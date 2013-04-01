@@ -59,50 +59,16 @@ public abstract class AbstractWro4jAttrProcessor extends
 		}
 
 		final HttpServletRequest request = ((IWebContext) arguments.getContext()).getHttpServletRequest();
-		final WroModelAccessor wro4jModelUtil = new WroModelAccessor(request, wroContextSupport);
+		final WroModelAccessor wro4jModelUtil = new WroModelAccessor(request, wroDeliveryConfiguration, wroContextSupport);
 		
 		final String requestedGroupname = element.getAttributeValue(attributeName);
 		final List<String> versionedUris = wro4jModelUtil.resources(requestedGroupname, resourceType);
 		
 		final StringBuilder buffer = new StringBuilder(ASSUMED_URI_LENGTH_PER_RESOURCE);
 		for(final String uri : versionedUris) {
-			final String encodedUri = encodeUri(uri);
-			buffer.append( getRenderedAttribute(encodedUri, wroDeliveryConfiguration.isDevelopment()) );
+			buffer.append( getRenderedAttribute(uri, wroDeliveryConfiguration.isDevelopment()) );
 		}
 		return buffer.toString();
-	}
-
-	
-	/**
-	 * Builds a URL accoring to the {@link WroDeliveryConfiguration}
-	 * 
-	 * @param uri
-	 *            a resources URI as returned from wro4j
-	 * @return the resources full URL including domain, context path and prefix
-	 * @see WroDeliveryConfiguration#getCdnDomain()
-	 * @see WroDeliveryConfiguration#getContextPath()
-	 * @see WroDeliveryConfiguration#getUriPrefix()
-	 */
-	protected String encodeUri(String uri) {
-		StringBuilder encoded = new StringBuilder(
-				ASSUMED_URI_LENGTH_PER_RESOURCE);
-
-		if (!StringUtils.isEmpty(wroDeliveryConfiguration.getCdnDomain())) {
-			encoded.append("//").append(
-					wroDeliveryConfiguration.getCdnDomain());
-		}
-
-		if (!StringUtils.isEmpty(wroDeliveryConfiguration.getContextPath())) {
-			encoded.append(wroDeliveryConfiguration.getContextPath());
-		}
-
-		if (!StringUtils.isEmpty(wroDeliveryConfiguration.getUriPrefix())) {
-			encoded.append(wroDeliveryConfiguration.getUriPrefix());
-		}
-
-		encoded.append(uri);
-
-		return encoded.toString();
 	}
 
 	/**

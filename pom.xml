@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.sevensource.parents</groupId>
 		<artifactId>parent-servlet</artifactId>
-		<version>0.9.11-SNAPSHOT</version>
+		<version>0.9.11</version>
 	</parent>
 
 
@@ -20,19 +20,14 @@
 		<dependency>
 			<groupId>org.sevensource</groupId>
 			<artifactId>wro4spring</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.sevensource</groupId>
 			<artifactId>thymeleaf4spring</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>0.0.1</version>
 			<optional>true</optional>
-		</dependency>
-
-		<dependency>
-			<groupId>javax.enterprise</groupId>
-			<artifactId>cdi-api</artifactId>
 		</dependency>
 	</dependencies>
 
