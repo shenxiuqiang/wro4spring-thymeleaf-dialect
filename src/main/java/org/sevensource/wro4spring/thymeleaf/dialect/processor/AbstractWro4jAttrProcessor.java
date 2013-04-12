@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.apache.commons.lang3.StringUtils;
 import org.sevensource.wro4spring.WroContextSupport;
 import org.sevensource.wro4spring.WroDeliveryConfiguration;
 import org.sevensource.wro4spring.WroModelAccessor;
