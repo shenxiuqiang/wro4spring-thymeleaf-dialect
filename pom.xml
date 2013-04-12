@@ -10,7 +10,7 @@
 
 	<groupId>org.sevensource.wro4spring</groupId>
 	<artifactId>wro4spring-thymeleaf-dialect</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<packaging>jar</packaging>
 
 	<name>Thymeleaf Dialect for use with wro4spring</name>
@@ -41,7 +41,7 @@
 		<url>http://github.com/sevensource/wro4spring-thymeleaf-dialect</url>
 		<connection>scm:git:git@github.com:sevensource/wro4spring-thymeleaf-dialect.git</connection>
 		<developerConnection>scm:git:git@github.com:sevensource/wro4spring-thymeleaf-dialect.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>v0.0.2</tag>
 	</scm>
 
 	<licenses>
