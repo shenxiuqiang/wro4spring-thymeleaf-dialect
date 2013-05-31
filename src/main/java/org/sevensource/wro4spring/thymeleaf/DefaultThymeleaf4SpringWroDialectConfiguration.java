@@ -37,7 +37,7 @@ public abstract class DefaultThymeleaf4SpringWroDialectConfiguration extends
 	@Override
 	protected ThymeleafViewResolver configureViewResolver(
 			ThymeleafViewResolver viewResolver) {
-		
+
 		//should we do this with an interceptor?
 		viewResolver.addStaticVariable("wro4j", wroModelAccessor);
 		return viewResolver;
